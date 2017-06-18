@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cricket Score Keeper</string>
+    <string name="runs">Run</string>
+    <string name="wickets">Wicket</string>
+    <string name="overs">Over</string>
+    <string name="score">Score</string>
+    <string name="six">Six</string>
+    <string name="four">Four</string>
+
+</resources>

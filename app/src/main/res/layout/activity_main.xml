@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.lenovo.first.scorekeeper.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:textColor="#E65100"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:gravity="center_vertical"
+                android:text="@string/runs"
+                android:textColor="#FB8C00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="@string/wickets"
+                android:textColor="#FB8C00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="@string/overs"
+                android:textColor="#FB8C00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="@string/six"
+                android:textColor="#FB8C00"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="@string/four"
+                android:textColor="#FB8C00"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/teamIndia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="clip_horizontal"
+                android:text="India"
+                android:textColor="#E65100"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/indiaRun"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/teamIndia"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="54sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/teamIndia"
+                android:layout_toRightOf="@id/indiaRun"
+                android:gravity="center_vertical"
+                android:onClick="addRunToIndia"
+                android:text="+1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/indiaWicket"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaRun"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaRun"
+                android:layout_toRightOf="@id/indiaWicket"
+                android:gravity="center_vertical"
+                android:onClick="addWicketsToIndia"
+                android:text="+1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/indiaOvers"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaWicket"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaWicket"
+                android:layout_toRightOf="@id/indiaOvers"
+                android:gravity="center_vertical"
+                android:onClick="addOversToIndia"
+                android:text="+1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/indiaSix"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaOvers"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaOvers"
+                android:layout_toRightOf="@id/indiaSix"
+                android:bufferType="normal"
+                android:gravity="center_vertical"
+                android:onClick="addSixToIndia"
+                android:text="+6"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/indiaFour"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaSix"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/indiaSix"
+                android:layout_toRightOf="@id/indiaFour"
+                android:gravity="center_vertical"
+                android:onClick="addFourToIndia"
+                android:text="+4"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/teamPak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pakistan"
+                android:textColor="#E65100"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/pakRun"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/teamPak"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="54sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/teamPak"
+                android:layout_toRightOf="@id/pakRun"
+                android:gravity="center_vertical"
+                android:onClick="addRunToPak"
+                android:text="+1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pakWicket"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakRun"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakRun"
+                android:layout_toRightOf="@id/pakWicket"
+                android:gravity="center_vertical"
+                android:onClick="addWicketsToPak"
+                android:text="+1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pakOvers"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakWicket"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakWicket"
+                android:layout_toRightOf="@id/pakOvers"
+                android:gravity="center_vertical"
+                android:onClick="addOversToPak"
+                android:text="+1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pakSix"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakOvers"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakOvers"
+                android:layout_toRightOf="@id/pakSix"
+                android:gravity="center_vertical"
+                android:onClick="addSixToPak"
+                android:text="+6"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pakFour"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakSix"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#FB8C00"
+                android:textSize="32sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/pakSix"
+                android:layout_toRightOf="@id/pakFour"
+                android:gravity="center_vertical"
+                android:onClick="addFourToPak"
+                android:text="+4"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight=".7">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9800"
+            android:onClick="resetScore"
+            android:text="Reset"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
